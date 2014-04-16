@@ -6,6 +6,7 @@ var width;
 var height;
 
 var username = null;
+var socket;
 
 function init() {
   // create canvas
@@ -21,7 +22,11 @@ function init() {
   c.font = "14pt Arial";
   c.textAlign = "right";
 
-  var socket = io.connect();
+  socket = io.connect();
+
+  socket.on('newuser', function(data) {
+    console.log(data);
+  });
 
   var button = document.querySelector("#login");
   button.onclick = login;
