@@ -5,6 +5,8 @@ var c;
 var width;
 var height;
 
+var username = null;
+
 function init() {
   // create canvas
   canvas = document.createElement("canvas");
@@ -18,6 +20,16 @@ function init() {
   c = canvas.getContext('2d');
   c.font = "14pt Arial";
   c.textAlign = "right";
+
+  var socket = io.connect();
+
+  var button = document.querySelector("#login");
+  button.onclick = login;
+}
+
+function login() {
+  username = document.querySelector("input[name=naam]").value;
+  socket.emit('login', username);
 }
 
 function setSize() {
