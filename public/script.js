@@ -28,13 +28,24 @@ function init() {
     console.log(data);
   });
 
-  var button = document.querySelector("#login");
-  button.onclick = login;
+  socket.on('player', function(user) {
+    console.log(user);
+  });
+
+  var form = document.querySelector("form");
+  form.onsubmit = login;
+
+  requestAnimationFrame(animate);
+}
+
+function animate() {
 }
 
 function login() {
   username = document.querySelector("input[name=naam]").value;
   socket.emit('login', username);
+  document.querySelector("form").style.display = "none";
+  return false;
 }
 
 function setSize() {

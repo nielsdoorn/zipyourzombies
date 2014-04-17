@@ -5,39 +5,32 @@ html, body {
 }
 
 canvas {
-	background-color: red;
+	background-color: grey;
 	text-align: center;
 }
 
-#logo {
+form {
 	width: 250px;
-	height: 120px;
-	line-height: 30px;
-	background-color: blue;
-	text-align: center;
-	border-radius:20px;
-	color: white;
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	margin-top: -60px;
 	margin-left: -125px;
+	box-shadow: rgba(0,0,0,0.7) 2px 2px 6px;
 }
 
-
-#login {
+input[type=text] {
+	padding: 10px;
 	position: absolute;
-	bottom: 10px;
 	width: 100px;
 	left: 50%;
 	margin-left: -50px;
 	background-color: ligthblue;
-	border: 1px solid black;
-	color: lightgreen;
+	border: none;
 	border-radius: 5px;
 	box-shadow: rgba(0,0,0,0.7) 2px 2px 6px;
 	transition: 400ms;
 	cursor: pointer;
+	width: 120px;
 }
 
 #login:hover {

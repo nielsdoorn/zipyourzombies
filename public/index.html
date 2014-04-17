@@ -6,11 +6,11 @@
 	<link rel="stylesheet" href="style.css">
 	<script src="script.js"></script>
 	<script src="/socket.io/socket.io.js"></script>
+	<script src="rAF.js"></script>
 </head>
 <body>
-	<DIV id="logo">
-		<input type="text" name="naam" placeholder="name">
-		<div id="login">Start the game</div>
-	</DIV>	
+		<form method="post">
+			<input type="text" name="naam" placeholder="login" min-length="3" required="true">
+		</form>
 </body>
 </html>
